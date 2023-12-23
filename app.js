@@ -74,3 +74,26 @@ fs.unlink('doc2.txt', (err) => {
 
 fs.unlinkSync('doc2.txt');
 console.log("File removed");
+
+//create js file
+fs.writeFileSync('test.js', 'console.log("Hello world");');
+console.log("File created");
+
+//append text to file
+fs.appendFileSync('test.js', 'console.log("Appended 2 Hello world");');
+console.log("Text appended");
+//
+// //rename file
+fs.renameSync('test.js', 'test2.js');
+console.log("File renamed");
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// check resource availability
+if (fs.existsSync('test2.js')) {
+    console.log("File exists");
+} else {
+    console.log("File not exists");
+}

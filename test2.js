@@ -1,0 +1,1 @@
+console.log("Hello world");console.log("Appended Hello world");console.log("Appended 2 Hello world");
