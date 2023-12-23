@@ -11,17 +11,23 @@ app.listen(3000,"localhost", () => {
 });
 
 app.get('/',(req,res) =>{
-    res.send('Home');
+    // res.status(200).send('Home');
+    res.sendFile('./views/index.html',{root:__dirname})
 });
 
 app.get('/about',(req,res) =>{
-    res.send('About');
+    // res.status(200).send('About');
+    res.sendFile('./views/about.html',{root:__dirname})
 });
 
 app.get('/career',(req,res) =>{
-    res.send('Career');
+    // res.status(200).send('Career');
+    res.sendFile('./views/career.html', {root:__dirname})
 });
 
 app.use((req, res)=>{
-    res.send('404');
+    // res.status(404).send('404');
+    res.sendFile('./views/404.html', {root:__dirname})
 });
+
+
