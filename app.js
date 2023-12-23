@@ -1,16 +1,16 @@
 const fs = require('fs');
 
-//after ECMAScript 6
+//after ECMAScript 6 use require
 //before ECMAScript 6 use import
 
 
 //asynchronous method
 //firstly print the end of the async program and then print the content of the file
-// fs.readFile('doc.txt', 'utf-8', (err, data) => {
-//     if (err) throw err;
-//     console.log(data);
-// });
-// console.log("End of the async program");
+fs.readFile('doc.txt', 'utf-8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+console.log("End of the async program");
 
 
 //read as Buffer
